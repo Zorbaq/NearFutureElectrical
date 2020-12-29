@@ -111,6 +111,12 @@ namespace NearFutureElectrical
     // checks engineer requirements for transfer
     private bool CheckEngineerLevel(int lvl)
     {
+
+            // No, thank you. Let anyone handle fission fuel. Might consider
+            // checking against experienceTrait.experienceEffect later on to allow custom classes.
+
+            return true;
+            
       List<ProtoCrewMember> crew = part.vessel.GetVesselCrew();
       foreach (ProtoCrewMember crewman in crew)
       {
